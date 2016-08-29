@@ -1,0 +1,21 @@
+version: 1.0
+fork: false
+pidfile: ./gtlgateway.pid
+zkwrapper:
+    hosts: 127.0.0.1:2181
+    root: /gtlservice
+    device: 
+    location: center
+    pulse: 30s
+    timeout: 60s
+    threshold: 1
+http:
+    bind: :30000
+    cors:
+        origin: "*"
+        methods: POST,PUT,GET,DELETE,OPTIONS
+logger:
+    logfile: logs/gtlgateway.log
+    loglevel: debug
+    logsize: 20971520
+...
